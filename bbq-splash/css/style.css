@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #404040;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+
+/* ================
+typography
+================== */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #fff;
+  margin: 0;
+}
+
+h1 + p,
+h2 + p,
+.top-text {
+  text-transform: uppercase;
+}
+h1 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2 + P {
+  color: #f18119;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 0;
+}
+
+.top-text {
+  color: #f18119;
+  font-size: 0.625rem;
+  font-weight: 900;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+strong {
+  font-weight: 900;
+}
+
+/* ================
+   intro
+================== */
+.intro {
+  /* background-color: #404040; */
+  background-image: url(../image/ribs.jpg), linear-gradient(45deg, red, blue);
+  background-blend-mode: multiply; /* this will work when bg color and image property added */
+  background-size: cover;
+  background-position: center;
+  padding: 0 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.top-text {
+  order: -1;
+  margin: 0;
+  padding-top: 2px;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+}
+
+/* =================
+   main-content section
+   ================= */
+.main-content {
+  padding: 2em 1em;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =================
+  form
+   ================= */
+
+.email-collector {
+  width: 80%;
+  max-width: 300px;
+}
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.75em;
+  padding: 0.25em;
+  border: 1px solid #404040;
+  transition: transform 250ms;
+}
+input:focus {
+  transform: scale(1.1);
+}
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ffa51d, #ff713b);
+  border: 0;
+  cursor: pointer;
+  color: white;
+  transition: transform 250ms;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+}
+/* =================
+   media-queries
+   ================= */
+@media (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+}
